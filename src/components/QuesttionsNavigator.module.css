@@ -1,0 +1,15 @@
+.questions-navigator{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.questions-navigator button{
+    border-radius: 32px;
+    border: none;
+    color: white;
+    background-color: #242951;
+    width:40px;
+    height:40px;
+    margin: 2px;
+}
