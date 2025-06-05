@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .questions-navigator button{
@@ -12,4 +13,11 @@
     width:40px;
     height:40px;
     margin: 2px;
+}
+.questions-navigator button:hover{
+    background: linear-gradient(to right,#e55998,#bd6ae5)
+}
+
+button.answered-item {
+    background: linear-gradient(to right,#e55998,#bd6ae5)
 }

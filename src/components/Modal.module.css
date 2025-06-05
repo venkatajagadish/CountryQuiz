@@ -1,0 +1,31 @@
+.container{
+    border: none;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #343963;
+    color: white;
+  }
+
+.container::backdrop {
+    background: rgba(0, 0, 0, 0.9);
+  }
+.modal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+  .modal button{
+    padding: 12px 16px;
+    border:none;
+    color:white;
+    border-radius: 8px;
+    background: linear-gradient(to right,#e55998,#bd6ae5)
+  }
+
+  @media screen and (max-width: 412px) {
+    .modal{
+        width:300px;
+    }
+}
+

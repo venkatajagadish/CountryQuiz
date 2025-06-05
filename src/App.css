@@ -1,10 +1,25 @@
 
 .app-component {
-  height:50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.questions-pane{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:600px;
+  background-color: #343963;
+  border-radius: 16px;
+  padding:40px;
+}
+
+@media screen and (max-width: 412px) {
+  .questions-pane{
+      width:300px;
+  }
 }

@@ -67,20 +67,24 @@ function prepareCurrencyQ() {
   var countriesWithCurrency = allCountries.filter(
     (country) => country.currencies && country.currencies.length > 0
   );
+  const uniqueCurrencies = [];
+  for (let country of countriesWithCurrency) {
+    for (let currency of country.currencies) {
+      if (uniqueCurrencies.indexOf(currency) == -1) {
+        uniqueCurrencies.push(currency);
+      }
+    }
+  }
   return {
     id: "CurrencyQ",
     question: `What is the currency of the ${countriesWithCurrency[1].name.common}?`,
     options: [
       countriesWithCurrency[1].currencies[0],
-      ...countriesWithCurrency
+      ...uniqueCurrencies
         .filter(
-          (country) =>
-            country.currencies.indexOf(
-              countriesWithCurrency[1].currencies[0]
-            ) == -1
+          (currency) => currency != countriesWithCurrency[1].currencies[0]
         )
-        .splice(0, 3)
-        .map((country) => country.currencies[0]),
+        .splice(0, 3),
     ].sort(() => Math.random() - 0.5),
     isAnswered: false,
     correctAnswer: countriesWithCurrency[1].currencies[0],
@@ -139,7 +143,7 @@ function prepareContinentQ() {
   ];
   return {
     id: "ContinentsQ",
-    question: `Which continent does the country ${allCountries[10]} belongs to?`,
+    question: `Which continent does the country ${allCountries[10].name.common} belongs to?`,
     options: [
       allCountries[10].continents[0],
       ...continents.filter(
@@ -179,19 +183,25 @@ function prepareLanguageQ() {
   var countriesWithLanguage = allCountries.filter(
     (country) => country.languages && country.languages.length > 0
   );
+
+  const uniqueLanguages = [];
+  for (let country of countriesWithLanguage) {
+    for (let language of country.languages) {
+      if (uniqueLanguages.indexOf(language) == -1) {
+        uniqueLanguages.push(language);
+      }
+    }
+  }
   return {
     id: "LanguageQ",
     question: `What is the majority spoken language of the ${countriesWithLanguage[12].name.common}?`,
     options: [
       countriesWithLanguage[12].languages[0],
-      ...countriesWithLanguage
+      ...uniqueLanguages
         .filter(
-          (country) =>
-            country.languages.indexOf(countriesWithLanguage[12].languages[0]) ==
-            -1
+          (language) => language != countriesWithLanguage[12].languages[0]
         )
-        .splice(0, 3)
-        .map((country) => country.languages[0]),
+        .splice(0, 3),
     ].sort(() => Math.random() - 0.5),
     isAnswered: false,
     correctAnswer: countriesWithLanguage[12].languages[0],

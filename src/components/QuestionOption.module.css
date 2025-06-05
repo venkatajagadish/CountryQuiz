@@ -1,0 +1,23 @@
+.option{
+    width:  200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset;
+    background-color: #272c54;
+}
+
+.option-text{
+    padding-right:15px;
+}
+.disable{
+    cursor:not-allowed;
+}
+.highlight{
+    background: linear-gradient(to right,#e55998,#bd6ae5)
+}
+
