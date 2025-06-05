@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CountryQuiz/static/css/main.3df9d75e.css",
+    "main.js": "/CountryQuiz/static/js/main.27cd9c42.js",
+    "static/media/Check_round_fill.svg": "/CountryQuiz/static/media/Check_round_fill.4d34fe7f6d86eedaf2f67b1538f5c155.svg",
+    "static/media/Close_round_fill.svg": "/CountryQuiz/static/media/Close_round_fill.01c4717bbae22cb0af89ec2f11fe3fc5.svg",
+    "index.html": "/CountryQuiz/index.html",
+    "main.3df9d75e.css.map": "/CountryQuiz/static/css/main.3df9d75e.css.map",
+    "main.27cd9c42.js.map": "/CountryQuiz/static/js/main.27cd9c42.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3df9d75e.css",
+    "static/js/main.27cd9c42.js"
+  ]
+}
